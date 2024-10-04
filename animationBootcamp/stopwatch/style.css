@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 20rem;
+    height: 20rem;
+    background: white;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999rem;
+    border: .6rem solid rgb(211, 211, 211);
+}
+
+aside.ms {
+    position: absolute;
+    width: 2px;
+    height: 8rem;
+    background: red;
+    top: 2rem;
+    transform-origin: bottom center;
+    animation: spin-second 60s infinite linear;
+}
+
+aside.s {
+    position: absolute;
+    width: 4px;
+    height: 8rem;
+    background: #888;
+    top: 2rem;
+    transform-origin: bottom center;
+    animation: spin-minute 3600s infinite linear;
+
+}
+
+.dot {
+    width: .5rem;
+    height: .5rem;
+    background: #888;
+    z-index: 99;
+    border-radius: 99rem;
+}
+
+
+@keyframes spin-second {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes spin-minute {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

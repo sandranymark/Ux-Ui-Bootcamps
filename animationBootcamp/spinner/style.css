@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    background: #eee;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    width: .4rem;
+    height: 6rem;
+    background: red;
+    border-radius: 99rem;
+    border: 6px solid transparent;
+    animation: spinner 5s infinite linear, color-change 5s infinite linear;
+
+
+}
+
+/* Skapa din animation här */
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-change {
+
+    0%,
+    24.99% {
+
+        background-color: red;
+    }
+
+    25%,
+    49.99% {
+
+        background-color: aqua;
+    }
+
+    50%,
+    74.99% {
+
+        background-color: blue;
+    }
+
+    75%,
+    99.99% {
+
+        background-color: yellow;
+    }
+
+    100% {
+
+        background-color: red;
+    }
+}
