@@ -1,0 +1,117 @@
+/* Använt mig av Gilbert Baker’s 9-Stripe Rainbow Pride Flag Color Codes (google) */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+
+.Pride-Deck {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
+}
+
+.card {
+    position: absolute;
+    width: 350px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+    transform-origin: center 99%;
+}
+
+.Pride-Deck:hover .card {
+    transition: transform 3s ease-in;
+}
+
+
+.card1 {
+    background-color: #CD66FF;
+}
+
+.card2 {
+    background-color: #FF6599;
+}
+
+.card3 {
+    background-color: #FF0000;
+}
+
+.card4 {
+    background-color: #FF8E00;
+}
+
+.card5 {
+    background-color: #FFFF00;
+}
+
+.card6 {
+    background-color: #008E00;
+}
+
+.card7 {
+    background-color: #00C0C0;
+}
+
+.card8 {
+    background-color: #400098;
+}
+
+.card9 {
+    background-color: #8E008E;
+}
+
+
+/* SOLFJÄDER TYP */
+
+.Pride-Deck:hover .card:nth-child(1) {
+    transform: rotate(-40deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(2) {
+    transform: rotate(-30deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(3) {
+    transform: rotate(-20deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(4) {
+    transform: rotate(-10deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(5) {
+    transform: rotate(0deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(6) {
+    transform: rotate(10deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(7) {
+    transform: rotate(20deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(8) {
+    transform: rotate(30deg) translateY(-50px);
+}
+
+.Pride-Deck:hover .card:nth-child(9) {
+    transform: rotate(40deg) translateY(-50px);
+}
