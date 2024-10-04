@@ -1,0 +1,60 @@
+ body {
+     background: #eee;
+     height: 100vh;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     perspective: 600px;
+ }
+
+ article {
+     width: 10rem;
+     height: 14rem;
+     position: relative;
+     transform-style: preserve-3d;
+     animation: flip 3s infinite alternate;
+
+ }
+
+ article .front,
+ article .back {
+     position: absolute;
+     height: inherit;
+     width: inherit;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     backface-visibility: hidden;
+
+ }
+
+ article .front {
+     background: rgb(225, 62, 62);
+ }
+
+ article .back {
+     background: rgb(255, 197, 24);
+     transform: rotateY(180deg);
+ }
+
+ @keyframes flip {
+
+     0% {
+         transform: translate3d(0, 0, 0) rotateY(0deg);
+
+     }
+
+     10% {
+         transform: translate3d(0, 0, 200px) rotateY(0deg);
+     }
+
+     90% {
+         transform: translate3d(0, 0, 200px) rotateY(180deg);
+     }
+
+     100% {
+         transform: translate3d(0, 0, 0) rotateY(180deg);
+     }
+ }
