@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions bootcamp</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+
+
+    <!-- Detta är för att skapa en slideIn meny -->
+
+    <button id="menuButton">Slide in</button>
+
+    <div id="overlay"></div>
+
+    <nav class="slideMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </nav>
+
+
+    <script>
+        const menuButton = document.querySelector('#menuButton');
+        const nav = document.querySelector('nav');
+        const overlay = document.querySelector('#overlay');
+
+        // Togglar meny och overlay när knappen menyknappen klickas
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            overlay.classList.toggle('show');
+        });
+
+        // Stänger menyn om man klickar på overlayen/sidan av menyn
+        overlay.addEventListener('click', () => {
+            nav.classList.remove('open');
+            overlay.classList.remove('show');
+        });
+    </script>
+</body>
+
+</html>

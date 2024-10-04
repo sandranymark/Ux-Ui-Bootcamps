@@ -1,0 +1,105 @@
+nav {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s ease;
+    z-index: 1001;
+}
+
+nav.open {
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    padding-top: 50px;
+}
+
+nav ul li {
+    opacity: 0;
+    transform: translateX(-300px);
+    animation: slideIn 1s forwards ease-in;
+}
+
+/* Individuell delay för varje meny "li" så
+att dom inte kommer in samtidigt utan glider in var och en för sig. */
+nav.open ul li:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+nav.open ul li:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+nav.open ul li:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+nav.open ul li:nth-child(4) {
+    animation-delay: 1.6s;
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+/* Styling för nav menyn */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Styling till menuknappen "Slide In" */
+#menuButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#menuButton:hover {
+    background-color: #555;
+}
+
+/* Overlay som visas när menyn är öppen */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+#overlay.show {
+    display: block;
+}

@@ -1,0 +1,76 @@
+/* Valt att navigationen ska komma in från vänster.
+vill jag ha på högersidan så ändrar jag bara left värdena
+till right istället.  */
+
+
+nav {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c2c2c;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.5s ease;
+    z-index: 1001;
+}
+
+nav.open {
+    left: 0;
+    /* Flyttar in menyn till rätt position*/
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    padding-top: 50px;
+}
+
+nav ul li {
+    padding: 15px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Menyknappen "Slide in" */
+#menuButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#menuButton:hover {
+    background-color: #2c2c2cd2;
+}
+
+/* Overlay som visas/läggs på när menyn är öppen och
+försvinner när den stängs/man klickar utanför */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.203);
+    display: none;
+    z-index: 1000;
+}
+
+#overlay.show {
+    display: block;
+}

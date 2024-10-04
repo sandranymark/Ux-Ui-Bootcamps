@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+    height: 100vh;
+}
+
+.hoverBtn {
+    border: none;
+    border-radius: 20px;
+    padding: 20px 40px 20px 40px;
+    background-color: hotpink;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.5s ease,
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+
+}
+
+.hoverBtn:hover {
+    background-color: rgba(255, 105, 180, 0.696);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* padding: 25px 45px; För att göra knappen större vid hover.
+    jag kan även ändra på scale om jag vill ändra
+    på storleken. */
+}
